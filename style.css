@@ -1,0 +1,38 @@
+ :root{
+	 --bg: #f4f7fb;
+	 --card: #ffffff;
+	 --accent: #0069ff;
+	 --muted: #6c757d;
+ }
+ *{box-sizing:border-box}
+ body{
+	 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	 margin:0; background:var(--bg); color:#111; -webkit-font-smoothing:antialiased;
+ }
+ .container{
+	 max-width:520px; margin:40px auto; padding:16px;
+ }
+ .card{
+	 background:var(--card); padding:18px; border-radius:10px; box-shadow:0 6px 18px rgba(15,20,30,0.06);
+ }
+ h1{margin:0 0 14px 0; font-size:1.5rem}
+ .row{display:flex; gap:8px; align-items:center; margin-bottom:12px}
+ label{font-size:0.95rem}
+ input[type="range"]{flex:1}
+ input[type="number"]{width:72px; padding:6px}
+ .options{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:12px}
+ .options label{font-size:0.9rem}
+ .actions{display:flex; gap:8px; margin-bottom:12px}
+ button{padding:8px 12px; border-radius:8px; border:0; cursor:pointer}
+ #generate{background:var(--accent); color:#fff}
+ #copy{background:#e9ecef}
+ .output{display:flex; gap:10px; align-items:center}
+ .output input{flex:1; padding:10px; border-radius:8px; border:1px solid #e6e9ef}
+ .strength{width:120px; height:10px; background:#eee; border-radius:6px; overflow:hidden}
+ .bar{width:0%; height:100%; background:#28a745; transition:width .25s ease, background .25s ease}
+ .hint{color:var(--muted); font-size:0.9rem; margin-top:12px}
+ 
+ @media (max-width:560px){
+	 .container{padding:12px}
+	 .row{flex-direction:column; align-items:flex-start}
+ }
